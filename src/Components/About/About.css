@@ -1,0 +1,125 @@
+.about {
+    padding: 2rem 6rem;
+    background:#161513;
+    color: #ffffff;
+}
+
+.about-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about-title h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.about-sections {
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.about-left {
+    flex: 1;
+}
+
+.about-left img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    border: 1px solid #333;
+}
+
+.about-right {
+    flex: 1;
+}
+
+.about-para p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+    margin-bottom: 1.5rem;
+}
+
+.about-skills {
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.about-skills:hover {
+    transform: translateY(-5px);
+}
+
+.about-skills p {
+    font-size: 1.1rem;
+    color: #2d2e32;
+    margin: 0;
+}
+
+.about-skills hr {
+    border: none;
+    height: 3px;
+    background: #007bff;
+    margin: 0.5rem 0;
+}
+
+.about-acheivements {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem 0;
+    background: #232323;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.05);
+}
+
+.about-achievement {
+    text-align: center;
+}
+
+.about-achievement h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+.about-achievement p {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    font-weight: 600;
+}
+
+.about-acheivements hr {
+    height: 50px;
+    width: 1px;
+    background: #333;
+    border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about {
+        padding: 2rem;
+    }
+    
+    .about-sections {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .about-acheivements {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .about-acheivements hr {
+        width: 50%;
+        height: 1px;
+    }
+}
