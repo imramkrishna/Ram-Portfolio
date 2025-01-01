@@ -19,22 +19,22 @@ const Contact = () => {
                 <div className="contact-info">
                     <div className="info-item">
                         <FaEnvelope />
-                        <p>youremail@example.com</p>
+                        <p>itsramky234@gmail.com</p>
                     </div>
                     <div className="info-item">
                         <FaPhone />
-                        <p>+1 234 567 8900</p>
+                        <p>+977 9703577211</p>
                     </div>
                     <div className="info-item">
                         <FaMapMarkerAlt />
-                        <p>Your Location</p>
+                        <p>Kathmandu, Nepal</p>
                     </div>
                     
                     <div className="social-links">
-                        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/imramkrishna" target="_blank" rel="noopener noreferrer">
                             <FaGithub />
                         </a>
-                        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+                        <a href="https://linkedin.com/in/ramkrishnaprofile" target="_blank" rel="noopener noreferrer">
                             <FaLinkedin />
                         </a>
                     </div>
