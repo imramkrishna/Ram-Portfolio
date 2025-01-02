@@ -135,6 +135,9 @@
     .about {
         padding: 2rem;
     }
+    .about-skills {
+        width: 90%;
+    }
     
     .about-sections {
         flex-direction: column;
