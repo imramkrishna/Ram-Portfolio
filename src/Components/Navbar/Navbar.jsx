@@ -8,6 +8,22 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    const target = document.querySelector(e.target.getAttribute('href'));
+    if (target) {
+      const headerOffset = 80; // adjust based on your navbar height
+      const elementPosition = target.offsetTop;
+      const offsetPosition = elementPosition - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+    setIsOpen(false);
+  };
+
   return (
     <div className='navbar'>
       <div className="nav-brand">
@@ -21,15 +37,15 @@ const Navbar = () => {
       </div>
 
       <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
-        <li><a href="#home" onClick={toggleMenu}>Home</a></li>
-        <li><a href="#about" onClick={toggleMenu}>About Me</a></li>
-        <li><a href="#services" onClick={toggleMenu}>Services</a></li>
-        <li><a href="#portfolio" onClick={toggleMenu}>Portfolio</a></li>
-        <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
+        <li><a href="#home" onClick={handleClick}>Home</a></li>
+        <li><a href="#about" onClick={handleClick}>About Me</a></li>
+        <li><a href="#services" onClick={handleClick}>Services</a></li>
+        <li><a href="#portfolio" onClick={handleClick}>Portfolio</a></li>
+        <li><a href="#contact" onClick={handleClick}>Contact</a></li>
       </ul>
 
       <div className="nav-connect">
-        Connect With Me
+        <a href="#contact">Connect With Me</a>
       </div>
     </div>
   );

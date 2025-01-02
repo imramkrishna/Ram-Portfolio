@@ -4,7 +4,7 @@ import profile from "../../assets/profile.svg";
 
 const Hero = () => {
   return (
-    <div className='hero'>
+    <div className='hero' id="home">
       <div className="hero-content">
         <img src={profile} alt="profile" className="hero-image" />
         <h1>
@@ -13,7 +13,7 @@ const Hero = () => {
         </h1>
         <p>I am a full stack developer specializing in MERN stack and Next.js, building modern web applications.</p>
         <div className="hero-action">
-          <button className="hero-connect">Connect With Me</button>
+          <a href="#contact"><button className="hero-connect">Connect With Me</button></a>
           <button className="hero-resume">My Resume</button>
         </div>
       </div>
