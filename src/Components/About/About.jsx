@@ -1,23 +1,20 @@
 import React from 'react';
 import "./About.css";
 
+
 const About = () => {
     return (
         <div className='about '>
             <div className="about-title">
                 <h1>About Me</h1>
-                
+
             </div>
             <div className="about-sections">
-                <div className="about-left">
 
-                    <img src="" alt="profile image" />
-
-                </div>
                 <div className="about-right">
                     <div className="about-para">
                         <p>I am a Passionate coder diving deep into the world of software development.Constantly exploring new technologies and building innovative solutions</p>
-                        <p>I work as a Full Stack Engineer specializing in the MERN stack (MongoDB, Express.js, React.js, Node.js), Next.js, and database management.</p>
+                        <p>A software engineer specializing in full-stack development, proficient in technologies such as MERN (MongoDB, Express, React, Node.js) and Next.js, is adept at building dynamic, scalable, and high-performance web applications. This engineer has a deep understanding of both front-end and back-end development, capable of designing user-friendly interfaces with React and efficiently managing data and server-side logic using Node.js and Express. Their expertise extends to utilizing MongoDB for handling complex data structures and ensuring smooth integration across the stack. In addition, they leverage Next.js for optimized performance, enabling server-side rendering and static site generation. With a focus on creating responsive, secure, and maintainable solutions, this full-stack engineer plays a critical role in bringing innovative ideas to life through robust, modern web technologies.</p>
                     </div>
                     <div className="about-skills">
                         <p>Full Stack development<hr style={{ width: "50%" }} /></p>
