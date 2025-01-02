@@ -14,13 +14,14 @@
 
 .nav-brand p {
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
     margin: 0;
 }
 
 .nav-menu {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -30,16 +31,19 @@
     color: #ffffff;
     text-decoration: none;
     transition: color 0.3s ease;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .nav-connect {
     color: #ffffff;
     cursor: pointer;
-    padding: 20px  40px;
+    padding: 20px 40px;
     border-radius: 50px;
-    background:linear-gradient(267deg,#DA7C25 0.36%,#B923E1 102.06%); 
-    font-size: 22px;
-    transition: 0.5s; 
+    background: linear-gradient(267deg,#DA7C25 0.36%,#B923E1 102.06%); 
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: 0.5s;
 }
 
 .nav-connect:hover {
@@ -118,5 +122,15 @@
 
     .nav-brand p {
         font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu li a {
+        font-size: 1.4rem;
+    }
+    
+    .nav-brand p {
+        font-size: 1.6rem;
     }
 }
