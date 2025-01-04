@@ -34,7 +34,7 @@ jobs:
       - name: Build
         run: |
           npm run build
-          cp Staticwebapp.config.json dist/
+          cp staticwebapp.config.json dist/
         env:
           CI: false
           
