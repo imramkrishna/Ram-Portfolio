@@ -51,4 +51,4 @@ jobs:
           api_location: ""
           output_location: "dist"
           skip_app_build: false
-          production_branch: "main"
+          production_branch: "master"
