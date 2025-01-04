@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Navbar from './Components/Navbar/Navbar';
 import Hero from './Components/Hero/Hero';
 import About from './Components/About/About';
@@ -8,14 +8,16 @@ import Contact from './Components/Contact/Contact';
 
 const App = () => {
   return (
-    <div>
-      <Navbar/>
-      <Hero/>
-      <About/>
-      <Services/>
-      <Portfolio/>
-      <Contact/>
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <div>
+        <Navbar/>
+        <Hero/>
+        <About/>
+        <Services/>
+        <Portfolio/>
+        <Contact/>
+      </div>
+    </Suspense>
   )
 }
 
