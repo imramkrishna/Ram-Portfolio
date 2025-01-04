@@ -32,7 +32,9 @@ jobs:
           npm install vite @vitejs/plugin-react --save-dev
         
       - name: Build
-        run: npm run build
+        run: |
+          npm run build
+          cp staticwebapp.config.json dist/
         env:
           CI: false
           
