@@ -10,6 +10,7 @@ on:
     branches:
       - main
       - master
+  workflow_dispatch:
 
 jobs:
   build_and_deploy_job:
@@ -25,12 +26,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
+          cache: 'npm'
           
-      - name: Clean Install Dependencies
+      - name: Install Dependencies
         run: |
-          npm ci
-          npm install vite @vitejs/plugin-react --save-dev
-        
+          rm -rf node_modules
+          npm install
+          
       - name: Build
         run: |
           npm run build
@@ -38,7 +40,7 @@ jobs:
         env:
           CI: false
           
-       - name: Build And Deploy
+      - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
@@ -49,5 +51,4 @@ jobs:
           api_location: ""
           output_location: "dist"
           skip_app_build: false
-          deployment_environment: production
-          app_build_command: "npm run build"
+          production_branch: "main"
