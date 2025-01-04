@@ -9,7 +9,7 @@ on:
     branches:
       - master
 
-001088e00.yml
+.yml
 jobs:
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
@@ -19,17 +19,19 @@ jobs:
       - uses: actions/checkout@v3
         with:
           submodules: true
-          lfs: false
-      
+          
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
+          cache: 'npm'
           
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm install
+          npm install vite @vitejs/plugin-react --save-dev
         
-      - name: Test build
+      - name: Build
         run: npm run build
           
       - name: Build And Deploy
@@ -41,7 +43,7 @@ jobs:
           action: "upload"
           app_location: "/"
           api_location: ""
-          output_location: "build"    # Changed from dist to build
+          output_location: "dist"  # Changed to dist for Vite
           app_build_command: "npm run build"
 
   close_pull_request_job:
