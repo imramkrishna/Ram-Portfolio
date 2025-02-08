@@ -1,11 +1,39 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
-    const handleSubmit = (e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Add form submission logic here
+        
+        try {
+            const formData = {
+                name: e.target.name.value, 
+                email: e.target.email.value,
+                subject: e.target.subject.value,
+                message: e.target.message.value
+            };
+    
+            const response = await fetch('http://localhost:3001/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+    
+            if (response.ok) {
+                alert('Message sent successfully!');
+                e.target.reset();
+            } else {
+                throw new Error('Failed to send message');
+            }
+            
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Failed to send message. Please try again.');
+        }
     };
 
     return (
@@ -41,20 +69,20 @@ const Contact = () => {
                 </div>
 
                 <form className="contact-form" onSubmit={handleSubmit}>
-                    <div className="form-group">
-                        <input type="text" placeholder="Your Name" required />
-                    </div>
-                    <div className="form-group">
-                        <input type="email" placeholder="Your Email" required />
-                    </div>
-                    <div className="form-group">
-                        <input type="text" placeholder="Subject" required />
-                    </div>
-                    <div className="form-group">
-                        <textarea placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit">Send Message</button>
-                </form>
+            <div className="form-group">
+                <input type="text" name="name" placeholder="Your Name" required />
+            </div>
+            <div className="form-group">
+                <input type="email" name="email" placeholder="Your Email" required />
+            </div>
+            <div className="form-group">
+                <input type="text" name="subject" placeholder="Subject" required />
+            </div>
+            <div className="form-group">
+                <textarea name="message" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
             </div>
         </div>
     );

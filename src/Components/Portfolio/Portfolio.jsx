@@ -6,7 +6,7 @@ const Portfolio = () => {
     const projects = [
         {
             id: 1,
-            title: "Multi Vendor Admin panrl",
+            title: "Multi Vendor Admin Panel",
             image: "admin.png",
             description: "A robust multi vendor admin panel for food,grocery and pharmacy delivery applications with admin panel",
             technologies: ["NextJs", "Node.js", "MongoDB", "Express", "Redux" ,"Tailwind CSS", "JWT"],
