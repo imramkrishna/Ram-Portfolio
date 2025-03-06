@@ -24,6 +24,15 @@ const Portfolio = () => {
         },
         {
             id: 3,
+            title: "Games Hub",
+            image: "gameshub.png",
+            description: "Flappy Bird, Snake, and Tetris — all integrated into a single, modern website! This project was built using Next.js and incorporates seamless gameplay directly in the browser.",
+            technologies: ["NextJS", "HTML canvas", "Tailwind CSS","Shadcn/UI"],
+            github: "https://github.com/imramkrishna/games",
+            live: "https://games-nine-murex.vercel.app/",
+        },
+        {
+            id: 4,
             title: "Banking System",
             image: "bank.avif",
             description: "This Full Stack Banking Application allows users to manage accounts, make transactions, and check balances securely. Built with Node.js, Express, Mongoose, and a responsive frontend using HTML, CSS, and JavaScript.",
