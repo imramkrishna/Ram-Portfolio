@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaGithub, FaLinkedin,FaTwitter, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
@@ -65,6 +65,10 @@ const Contact = () => {
                         <a href="https://linkedin.com/in/ramkrishnaprofile" target="_blank" rel="noopener noreferrer">
                             <FaLinkedin />
                         </a>
+                        <a href="https://x.com/ramkrishnacode" target="_blank" rel="noopener noreferrer">
+                            <FaTwitter />
+                        </a>
+
                     </div>
                 </div>
 
